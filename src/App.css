@@ -1,38 +1,163 @@
-.App {
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css');
+
+
+@media (max-width: 768px) {
+  /* Styles for smaller screens */
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%; /* Set the height of the body to cover the viewport */
+  width: 100%;  /* Set the width of the body to cover the entire viewport */
+  /* Any other styles you need for the body element */
+}
+
+
+
+
+#quote-box {
+  font-size: 16px;
+  font-family: 'Material Symbols Outlined', sans-serif;
+  margin-right: 20px;
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100%;
+  transition: 0.3s ease-in;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.quote-container {
+  background-color: white;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+}
+
+#new-quote {
+  font-size: 17px;
+  display: flex;
+  padding: 10px;
+  background-color: '${quoteColor}';
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  justify-content: flex-end; /* Move the "New quote" button to the right */
+  margin-left: auto;
+  
+}
+
+#new-quote:hover {
+  background-color: #ff5733;
   color: white;
+  cursor: pointer;
 }
 
-.App-link {
-  color: #61dafb;
+.quote-container {
+  background-color: white;
+  padding: 30px;
+  margin: 30px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height : 200px; /* Adjust the minimum height as needed */
+  width: 400px; /* Adjust the minimum width as needed */
+}
+.icons-container {
+  background-color: inherit;
+  display: flex;
+  justify-content: flex-start; /* Keep the icons to the left */
+  align-items: flex-start; /* Keep the icons aligned to the top */
+  width: 100%;
+  padding: 10px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+
+.icons-container i {
+  font-size: 24px;
+  background-color: '${iconColor}'; /* Use the iconColor variable for the background color */
+  color: '${quoteColor}'; /* Use the quoteColor variable for the text color */
+  padding: 10px;
+  border: 1px solid #ccc;
+  justify-content: left;
+  border-radius: 0; /* Remove border-radius to make it square */
+  margin-right: 5px; /* Add space between icons */
+  width: 24px;
+  height: 24px;
+  
+}
+
+
+/* Add styles for the footer in your CSS */
+footer {
+  color: white;
+  padding: 10px;
+  text-align: center;
+}
+
+.icon {
+  /* Style the custom icon here */
+  font-family: 'Material Symbols Outlined', sans-serif;
+  font-size: 24px; /* Adjust the icon size as needed */
+  margin-right: 10px; /* Add spacing between the icon and the quote text */
+}
+
+#tweet-quote {
+  position: relative; /* Required for positioning the tooltip */
+}
+
+#tweet-quote::before {
+  font-family: fantasy;
+  font-size: small;
+  content: "Share your favorite quote on Twitter";
+  position: absolute;
+  bottom: 50%; /* Position the tooltip above the element */
+  left: 50%; /* Center horizontally */
+  transform: translateX(-50%); /* Center horizontally */
+  background-color: #000000;
+  color: #fff;
+  padding: 5px 5px;
+  border-radius: 3px;
+  opacity: 0; /* Hide the tooltip by default */
+  pointer-events: none; /* Ensure the tooltip doesn't interfere with clicks */
+  transition: opacity 0.2s ease-in-out; /* Add a smooth fade-in transition */
+}
+
+#tweet-quote:hover::before {
+  opacity: 1; /* Show the tooltip on hover */
+}
+
+#tweet-quote {
+  position: relative; /* Required for positioning the tooltip */
+}
+
+#tumblr-quote {
+  position: relative; /* Required for positioning the tooltip */
+}
+#tumblr-quote::before {
+  font-family: fantasy;
+  font-size: small;
+  content: "Share your favorite quote on Tumblr";
+  position: absolute;
+  bottom: 50%; /* Position the tooltip above the element */
+  left: 50%; /* Center horizontally */
+  transform: translateX(-50%); /* Center horizontally */
+  background-color: #000000;
+  color: #fff;
+  padding: 5px 10px;
+  border-radius: 3px;
+  opacity: 0; /* Hide the tooltip by default */
+  pointer-events: none; /* Ensure the tooltip doesn't interfere with clicks */
+  transition: opacity 0.2s ease-in-out; /* Add a smooth fade-in transition */
+}
+
+#tumblr-quote:hover::before {
+  opacity: 1; /* Show the tooltip on hover */
 }
