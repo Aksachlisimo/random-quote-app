@@ -3,7 +3,7 @@ import React from 'react';
 function Footer() {
   return (
     <footer>
-      By Aksachli
+      Developed & coded By Aksachli
     </footer>
   );
 }
