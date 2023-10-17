@@ -97,7 +97,10 @@ body {
 
 /* Add styles for the footer in your CSS */
 footer {
-  color: white;
+  font-size: large;
+  font-weight: lighter;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  color : rgb(255, 255, 255);
   padding: 10px;
   text-align: center;
 }
